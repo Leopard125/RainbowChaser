@@ -136,8 +136,18 @@ void lcd_initial(){
 	delay(1);
 }
 
-void string(uchar address,uchar *s){
-	write_command(address); //找显示数据RAM地址
-	while(*s>0) write_data(*s++); //循环写入数据
-}
+// void string(uchar address,uchar *s){
+	// write_command(address); //找显示数据RAM地址
+	// while(*s>0) write_data(*s++); //循环写入数据
+// }
 
+void string(uchar address,uchar *s){
+	uchar i=0;
+	while(*s!='\0') 
+	{
+		write_command(address+i); //找显示数据RAM地址
+		write_data(*s++); //循环写入数据
+		i++;
+	}
+	i=0;
+}
