@@ -120,3 +120,6 @@ int isRight()
 	}else chk = 0;
 	return chk;
 }
+
+
+//²âÊÔÒ»ÏÂgit-hwc
