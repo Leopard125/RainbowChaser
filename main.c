@@ -9,9 +9,9 @@ typedef unsigned char uchar;
 typedef unsigned int uint;
 
 #define out P0
-sbit E=P3^5;
-sbit RW=P3^6;
-sbit RS=P3^7;
+sbit E=P1^2;
+sbit RW=P1^1;
+sbit RS=P1^0;
 
 //12Mhz£¨83us
 void delay(uint j); //—” ±
